@@ -1,0 +1,215 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    @media(max-width: 940px){
+        padding: 0px 30px;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.header{
+    position: relative;
+    .navbar-toggler{
+        display: none;
+        border: none;
+        background: transparent;
+        @include pad{
+            display: block;
+        }
+    }
+    h1 a{
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+        width:215px;
+        height:40px;
+        background-size:contain; /*將背景圖片縮小至可以在容器內呈現*/
+        background-repeat: no-repeat;
+        text-indent: 101%; /*縮排語法，設定 101% 讓a連結的文字超出圖片範圍*/
+        overflow: hidden; /*再用 overflow 隱藏多出來的文字*/
+        white-space: nowrap; /*讓文字不換行 */
+        margin: 30px auto;
+        @include pad{
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+            width: 115px;
+            height: 18px;
+        }
+    }
+}
+
+.navbar{
+    align-items: center;
+    .navbar-nav{
+        text-align: center;
+        @include pad{
+            max-height: 0px;
+            background-color: #fff;
+            width: 100%; //滿版（ul同時有.flex，所以已設定好wrap）
+            @include absolute(100%, 0px); //絕對定位
+            overflow: hidden; //自動隱藏超出範圍的
+            transition: all 0.8s; //jQuery觸發動畫
+        }
+        a{
+            @include font(16px, 40px, $primary);
+            font-weight: bold;
+            padding: 0 30px;
+            &:hover{
+                background-color: $secondary;
+            }
+        }
+        li{
+            @include pad{
+                width: 100%;
+            }
+        }
+    }
+    .active{
+        @include pad{
+            max-height: 120px;
+        }
+    }
+    .navbar-link{
+        margin-left: 30px;
+    }
+}
+
+.footer{
+    margin-top: 60px;
+    @include pad{
+        margin-top: 30px;
+    }
+}
+
+.subs{
+    background-color: $primary;
+    .container{
+        padding: 30px;
+        @include pad{
+            justify-content: center;
+        }
+    }
+}
+
+.info{
+    background-color: $secondary;
+    .container{
+        padding:30px;
+    }
+}
+
+.emailText{
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    h3{
+        @include font(24px, 30px, $secondary)
+    }
+    @include pad{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.subs form{
+    background-color: $secondary;
+    width: 380px;
+    flex-wrap: nowrap;
+    @include pad{
+        width: 315px;
+    }
+    img{
+        width: 24px;
+        height: 24px;
+        margin: 16px 20px;
+    }
+    input{
+        width: calc(100% - 88px);
+        border: none;
+        padding: 16px;
+        background-color: $secondary;
+    }
+    button{
+        background-color: $alret;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+        width: 64px;
+        height: 56px;
+    }
+}
+
+.left{
+    img{
+        max-width: 171px;
+        margin-bottom: 115px;
+        @include pad{
+            margin-bottom: 40px;
+        }
+    }
+    li{
+        @include font(16px,24px,$primary)
+    }
+} 
+
+.right{
+    @include pad{
+        display: none;
+    }
+    h2{
+        @include font(24px, 30px,$primary);
+        writing-mode: vertical-rl;
+        font-family: 'Noto Serif TC', serif;
+    }
+}
+
+.bottom{
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+    a{
+        display:inline-block;
+        width: 32px;
+        height: 32px;
+    }
+    p{
+        @include font(16px, 32px, $primary);
+        @include pad{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}

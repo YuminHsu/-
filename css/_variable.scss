@@ -1,0 +1,31 @@
+@mixin pad{
+    @media(max-width: 768px){
+        @content;
+    }
+}
+  
+@mixin mobile{
+    @media(max-width: 500px){
+        @content;
+    }
+}
+
+@mixin font($size, $height, $color) {
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+@mixin border($border, $color) {
+    border: solid $border $color;
+}
+
+@mixin absolute($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+$primary: #3F5D45;
+$secondary: #EAF0ED;
+$alret: #FFE180;

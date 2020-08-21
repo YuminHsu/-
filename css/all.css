@@ -1,0 +1,505 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+@media (max-width: 940px) {
+  .container {
+    padding: 0px 30px;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header {
+  position: relative;
+}
+
+.header .navbar-toggler {
+  display: none;
+  border: none;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .header .navbar-toggler {
+    display: block;
+  }
+}
+
+.header h1 a {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+  width: 215px;
+  height: 40px;
+  background-size: contain;
+  /*將背景圖片縮小至可以在容器內呈現*/
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  /*縮排語法，設定 101% 讓a連結的文字超出圖片範圍*/
+  overflow: hidden;
+  /*再用 overflow 隱藏多出來的文字*/
+  white-space: nowrap;
+  /*讓文字不換行 */
+  margin: 30px auto;
+}
+
+@media (max-width: 768px) {
+  .header h1 a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+    width: 115px;
+    height: 18px;
+  }
+}
+
+.navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-nav {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    max-height: 0px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    overflow: hidden;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+}
+
+.navbar .navbar-nav a {
+  font-size: 16px;
+  line-height: 40px;
+  color: #3F5D45;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+.navbar .navbar-nav a:hover {
+  background-color: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .active {
+    max-height: 120px;
+  }
+}
+
+.navbar .navbar-link {
+  margin-left: 30px;
+}
+
+.footer {
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 30px;
+  }
+}
+
+.subs {
+  background-color: #3F5D45;
+}
+
+.subs .container {
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .subs .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.info {
+  background-color: #EAF0ED;
+}
+
+.info .container {
+  padding: 30px;
+}
+
+.emailText {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.emailText img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.emailText h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #EAF0ED;
+}
+
+@media (max-width: 768px) {
+  .emailText {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.subs form {
+  background-color: #EAF0ED;
+  width: 380px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .subs form {
+    width: 315px;
+  }
+}
+
+.subs form img {
+  width: 24px;
+  height: 24px;
+  margin: 16px 20px;
+}
+
+.subs form input {
+  width: calc(100% - 88px);
+  border: none;
+  padding: 16px;
+  background-color: #EAF0ED;
+}
+
+.subs form button {
+  background-color: #FFE180;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+  width: 64px;
+  height: 56px;
+}
+
+.left img {
+  max-width: 171px;
+  margin-bottom: 115px;
+}
+
+@media (max-width: 768px) {
+  .left img {
+    margin-bottom: 40px;
+  }
+}
+
+.left li {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3F5D45;
+}
+
+@media (max-width: 768px) {
+  .right {
+    display: none;
+  }
+}
+
+.right h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #3F5D45;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.bottom {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.bottom a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.bottom p {
+  font-size: 16px;
+  line-height: 32px;
+  color: #3F5D45;
+}
+
+@media (max-width: 768px) {
+  .bottom p {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.banner {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 0px;
+  }
+}
+
+.menu {
+  width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.menu h2 {
+  font-size: 24px;
+  line-height: 65px;
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+
+.menu a {
+  font-size: 24px;
+  line-height: 65px;
+  color: #3F5D45;
+  border: solid 1px #EAF0ED;
+}
+
+.menu a:hover {
+  background-color: #EAF0ED;
+}
+
+.product {
+  width: 65%;
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
+}
+
+.product li {
+  width: 48%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .product li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.product img {
+  width: 100%;
+}
+
+.product .special {
+  font-size: 16px;
+  line-height: 20px;
+  color: #EAF0ED;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  background-color: #3F5D45;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  padding: 10px;
+  letter-spacing: 4px;
+}
+
+.product .fav {
+  position: absolute;
+  top: 0px;
+  left: calc(100% - 60px);
+  padding: 20px;
+}
+
+.product .tag h4 {
+  font-size: 20px;
+  line-height: 20px;
+  color: #3F5D45;
+  border: solid 1px #EAF0ED;
+  width: calc(50% - 2.23px);
+  text-align: center;
+  padding: 14px 0px;
+}
+
+.product .cart {
+  width: 100%;
+  font-size: 24px;
+  line-height: 20px;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  font-weight: bold;
+  padding: 16px 0px;
+}
+
+.product .cart:hover {
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+
+.page {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+  .page {
+    margin-top: 0px;
+  }
+}
+
+.page a {
+  font-size: 20px;
+  line-height: 20px;
+  color: #3F5D45;
+  border: solid 1px #EAF0ED;
+  width: 60px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page a:hover {
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+/*# sourceMappingURL=all.css.map */

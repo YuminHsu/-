@@ -1,0 +1,98 @@
+.banner{
+    margin-bottom: 60px;
+    @include pad{
+        margin-bottom: 0px;
+    }
+}
+
+.menu{
+    width: 30%;
+    text-align: center;
+    @include pad{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    h2{
+        @include font(24px, 65px, $secondary);
+        background-color: $primary;
+    }
+    a{
+        @include font(24px, 65px, $primary);
+        @include border(1px, $secondary);
+        &:hover{
+            background-color: $secondary;
+        }
+    }
+}
+
+.product{
+    width: 65%;
+    @include pad{
+        width: 100%;
+    }
+    li{
+        width: 48%;
+        margin-bottom: 20px;
+        position: relative;
+        @include mobile{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .special{
+        @include font(16px, 20px, $secondary);
+        @include absolute(0px, 20px);
+        background-color: $primary;
+        writing-mode: vertical-lr;
+        padding: 10px;
+        letter-spacing: 4px;
+    }
+    .fav{
+        @include absolute(0px, calc(100% - 60px));
+        padding: 20px;
+    }
+    .tag{
+        h4{
+            @include font(20px, 20px, $primary);
+            @include border(1px, $secondary);
+            width: calc(50% - 2.23px);
+            text-align: center;
+            padding: 14px 0px;
+        }
+    }
+    .cart{
+        width: 100%;
+        @include font(24px, 20px, $primary);
+        background-color: $secondary;
+        font-weight: bold;
+        padding: 16px 0px;
+        &:hover{
+            color: $secondary;
+            background-color: $primary;
+        }
+    }
+}
+
+.page{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+    @include mobile{
+        margin-top: 0px;
+    }
+    a{
+        @include font(20px, 20px, $primary);
+        @include border(1px, $secondary);
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            color: $secondary;
+            background-color: $primary;
+        }
+    }
+}
