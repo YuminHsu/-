@@ -502,4 +502,85 @@ button {
   color: #EAF0ED;
   background-color: #3F5D45;
 }
+
+.success {
+  max-width: 940px;
+  margin: 0 auto;
+  background-image: url(https://bit.ly/2P7GhNd);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 460px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .success {
+    margin-bottom: 65px;
+  }
+}
+
+.success div {
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 90px);
+}
+
+@media (max-width: 768px) {
+  .success div {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 90px);
+  }
+}
+
+.success ul {
+  font-size: 20px;
+  line-height: 20px;
+  color: #3F5D45;
+}
+
+.success ul .border {
+  width: 60px;
+}
+
+.success ul .border hr {
+  border: solid 0.5px #3F5D45;
+}
+
+.success h2 {
+  font-size: 45px;
+  line-height: 45px;
+  color: #3F5D45;
+  margin-top: 30px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: bold;
+}
+
+.success a {
+  font-size: 20px;
+  line-height: 65px;
+  color: #3F5D45;
+  background-color: #FFE180;
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  left: 33.5%;
+}
+
+.success a:hover {
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+
+@media (max-width: 768px) {
+  .success a {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+  }
+}
 /*# sourceMappingURL=all.css.map */

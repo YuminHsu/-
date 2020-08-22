@@ -1,0 +1,51 @@
+.success{
+    max-width: 940px;
+    margin: 0 auto;
+    background-image: url(https://bit.ly/2P7GhNd);
+    background-size:cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 460px;
+    position: relative;
+    @include pad{
+        margin-bottom: 65px;
+    }
+    div{
+        @include absolute(30%, calc(50% - 90px))
+        @include pad{
+            @include absolute(calc(50% - 40px), calc(50% - 90px));
+        }
+    }
+    ul{
+        @include font(20px, 20px, $primary);
+        .border{
+            width: 60px;
+            hr{
+                @include border(0.5px, $primary);
+            }
+        }
+    }
+    h2{
+        @include font(45px, 45px, $primary);
+        margin-top: 30px;
+        font-family: 'Noto Serif TC', serif;
+        font-weight: bold;
+    }
+    a{
+        @include font(20px, 65px, $primary);
+        background-color: $alert;
+        width: 33%;
+        text-align: center;
+        font-weight: bold;
+        @include absolute(60%, 33.5%);
+        &:hover{
+            color: $secondary;
+            background-color: $primary;
+        }
+        @include pad{
+            width: 100%;
+            @include absolute(100%, 0px);
+        }
+    }
+}
+
