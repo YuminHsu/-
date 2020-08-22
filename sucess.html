@@ -1,1 +1,86 @@
-<i class="fas fa-check-circle"></i>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header container flex">
+        <button class="navbar-toggler">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/dehaze-24px.png"
+                alt="nav">
+        </button>
+        <h1><a href="#">Sweetaste六角甜點</a></h1>
+        <div class="navbar flex">
+            <ul class="navbar-nav flex">
+                <li><a href="#">甜點</a></li>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">登入</a></li>
+            </ul>
+            <a class="navbar-link" href="#">
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true" alt="cart">
+            </a>
+        </div>
+    </div>
+
+    <div class="container"></div>
+
+    <div class="footer">
+        <div class="subs">
+            <div class="container flex">
+                <div class="emailText flex">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-light.svg"
+                        alt="logo-light">
+                    <h3>訂閱你我的甜蜜郵件</h3>
+                </div>
+                <form action="index.html" class="flex">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png"
+                        alt="email">
+                    <input type="email" name="email" placeholder="email">
+                    <button type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container flex">
+                <div class="left flex column">
+                    <img class="footerLogo"
+                        src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg"
+                        alt="">
+                    <ul class="column">
+                        <li>07-1234-5678 </li>
+                        <li>sweetaste@email.com</li>
+                        <li> 800 高雄市新興區幸福路 520 號</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2>今天是個—— <br>吃甜點的好日子。</h2>
+                </div>
+                <div class="bottom flex">
+                    <div>
+                        <a href="#"><img
+                                src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg"
+                                alt="line"></a>
+                        <a href="#"><img
+                                src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-facebook.svg"
+                                alt="fb"></a>
+                    </div>
+                    <p>© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $('.navbar-toggler').click(function () {
+            $('.navbar-nav').toggleClass('active')
+        })
+    </script>
+</body>
+
+</html>
