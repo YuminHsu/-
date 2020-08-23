@@ -80,6 +80,7 @@ button{
             @include absolute(100%, 0px); //絕對定位
             overflow: hidden; //自動隱藏超出範圍的
             transition: all 0.8s; //jQuery觸發動畫
+            z-index: 50; //加入aos之後出現圖層問題，需把選單堆疊更上層
         }
         a{
             @include font(16px, 40px, $primary);
