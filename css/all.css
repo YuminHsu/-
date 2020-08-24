@@ -169,6 +169,7 @@ button {
     overflow: hidden;
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
+    z-index: 50;
   }
 }
 
